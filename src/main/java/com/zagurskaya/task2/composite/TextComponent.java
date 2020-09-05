@@ -1,6 +1,6 @@
-package com.zagurskaya.composite.composite;
+package com.zagurskaya.task2.composite;
 
-import com.zagurskaya.composite.composite.impl.componentEnum.TextComponentType;
+import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
 
 public interface TextComponent {
     void add(TextComponent component);

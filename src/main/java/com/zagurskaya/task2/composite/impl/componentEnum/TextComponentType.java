@@ -1,4 +1,4 @@
-package com.zagurskaya.composite.composite.impl.componentEnum;
+package com.zagurskaya.task2.composite.impl.componentEnum;
 
 public enum TextComponentType {
     TEXT,

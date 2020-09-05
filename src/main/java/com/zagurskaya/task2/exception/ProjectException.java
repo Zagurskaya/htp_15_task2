@@ -1,4 +1,4 @@
-package com.zagurskaya.composite.exception;
+package com.zagurskaya.task2.exception;
 
 public class ProjectException extends RuntimeException {
 

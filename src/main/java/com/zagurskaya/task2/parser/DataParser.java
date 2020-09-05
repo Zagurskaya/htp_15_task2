@@ -1,4 +1,4 @@
-package com.zagurskaya.composite.parser;
+package com.zagurskaya.task2.parser;
 
 import java.util.Arrays;
 import java.util.List;

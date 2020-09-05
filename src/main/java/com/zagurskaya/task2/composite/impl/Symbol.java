@@ -1,9 +1,9 @@
-package com.zagurskaya.composite.composite.impl;
+package com.zagurskaya.task2.composite.impl;
 
-import com.zagurskaya.composite.composite.TextComponent;
-import com.zagurskaya.composite.composite.impl.componentEnum.SymbolType;
-import com.zagurskaya.composite.composite.impl.componentEnum.TextComponentType;
-import com.zagurskaya.composite.exception.ProjectException;
+import com.zagurskaya.task2.composite.TextComponent;
+import com.zagurskaya.task2.composite.impl.componentEnum.SymbolType;
+import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
+import com.zagurskaya.task2.exception.ProjectException;
 
 public class Symbol implements TextComponent {
 

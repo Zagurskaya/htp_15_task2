@@ -1,6 +1,6 @@
-package com.zagurskaya.composite.reader;
+package com.zagurskaya.task2.reader;
 
-import com.zagurskaya.composite.exception.ProjectException;
+import com.zagurskaya.task2.exception.ProjectException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

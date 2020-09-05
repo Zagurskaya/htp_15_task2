@@ -1,11 +1,11 @@
-package com.zagurskaya.composite.parser.impl;
+package com.zagurskaya.task2.parser.impl;
 
-import com.zagurskaya.composite.composite.TextComponent;
-import com.zagurskaya.composite.composite.impl.Symbol;
-import com.zagurskaya.composite.composite.impl.componentEnum.SymbolType;
-import com.zagurskaya.composite.composite.impl.componentEnum.TextComponentType;
-import com.zagurskaya.composite.composite.impl.TextComposite;
-import com.zagurskaya.composite.parser.Parser;
+import com.zagurskaya.task2.composite.TextComponent;
+import com.zagurskaya.task2.composite.impl.Symbol;
+import com.zagurskaya.task2.composite.impl.componentEnum.SymbolType;
+import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
+import com.zagurskaya.task2.composite.impl.TextComposite;
+import com.zagurskaya.task2.parser.Parser;
 
 import java.util.Arrays;
 import java.util.List;

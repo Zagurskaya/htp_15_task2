@@ -1,7 +1,7 @@
-package com.zagurskaya.composite.composite.impl;
+package com.zagurskaya.task2.composite.impl;
 
-import com.zagurskaya.composite.composite.TextComponent;
-import com.zagurskaya.composite.composite.impl.componentEnum.TextComponentType;
+import com.zagurskaya.task2.composite.TextComponent;
+import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
 
 import java.util.ArrayList;
 import java.util.List;
