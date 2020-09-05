@@ -1,16 +1,16 @@
 package com.zagurskaya.composite.composite.impl;
 
 import com.zagurskaya.composite.composite.TextComponent;
-import com.zagurskaya.composite.composite.impl.componentEnum.SymbolComponentType;
+import com.zagurskaya.composite.composite.impl.componentEnum.SymbolType;
 import com.zagurskaya.composite.composite.impl.componentEnum.TextComponentType;
 import com.zagurskaya.composite.exception.ProjectException;
 
-public class SymbolComposite implements TextComponent {
+public class Symbol implements TextComponent {
 
-    private SymbolComponentType type;
+    private SymbolType type;
     private char content;
 
-    public SymbolComposite(char content, SymbolComponentType type) {
+    public Symbol(char content, SymbolType type) {
         this.content = content;
         this.type = type;
     }

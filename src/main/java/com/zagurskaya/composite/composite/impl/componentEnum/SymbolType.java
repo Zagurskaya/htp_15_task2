@@ -1,6 +1,7 @@
 package com.zagurskaya.composite.composite.impl.componentEnum;
 
-public enum SymbolComponentType {
+public enum SymbolType {
     PUNCTUATION,
-    LETTER;
+    LETTER,
+    NUMBER
 }
