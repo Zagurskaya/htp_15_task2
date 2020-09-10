@@ -12,7 +12,7 @@ import javax.script.ScriptException;
 public class Calculate {
     static final Logger logger = LogManager.getLogger(Calculate.class);
 
-    public static String result(String text, Long i, Long j) {
+    public static String arithmeticExpression(String text, Long i, Long j) {
         ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
         ScriptEngine engine = scriptEngineManager.getEngineByName("JavaScript");
 

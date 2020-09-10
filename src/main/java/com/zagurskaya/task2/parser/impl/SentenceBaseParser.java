@@ -5,23 +5,22 @@ import com.zagurskaya.task2.composite.impl.Symbol;
 import com.zagurskaya.task2.composite.impl.SymbolType;
 import com.zagurskaya.task2.composite.impl.TextComponentType;
 import com.zagurskaya.task2.composite.impl.TextComposite;
-import com.zagurskaya.task2.parser.Parser;
+import com.zagurskaya.task2.parser.BaseParser;
 import com.zagurskaya.task2.validation.DataValidation;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SentenceParser implements Parser {
-    private final static SentenceParser sentenceParser = new SentenceParser();
+public class SentenceBaseParser implements BaseParser {
+    private final static SentenceBaseParser sentenceParser = new SentenceBaseParser();
     private static final String SENTENCE_DELIMITER = "((?<=[.!?])|(?=[.!?]))";
-    //    private static final String SENTENCE_DELIMITER = "[.!?]|[.]+";
-    private LexemeParser lexemeParser = LexemeParser.getInstance();
+    private LexemeBaseParser lexemeParser = LexemeBaseParser.getInstance();
 
-    private SentenceParser() {
+    private SentenceBaseParser() {
     }
 
-    public static SentenceParser getInstance() {
+    public static SentenceBaseParser getInstance() {
         return sentenceParser;
     }
 

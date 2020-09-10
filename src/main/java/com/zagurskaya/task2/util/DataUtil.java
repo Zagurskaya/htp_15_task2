@@ -1,4 +1,4 @@
-package com.zagurskaya.task2.reformer;
+package com.zagurskaya.task2.util;
 
 import com.zagurskaya.task2.calculate.Calculate;
 
@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DataReformer {
+public class DataUtil {
     private static final String ARITHMETIC_EXPRESSION_PATTERN = "\\s([ij\\d+\\.\\+\\-\\*\\/\\(\\)\\s^%]*)\\s";
 
-    public String refactor(String text, Long i, Long j) {
+    public static String refactorTextWithArithmeticExpression(String text, Long i, Long j) {
         String refactorText = text;
 
         Pattern pattern = Pattern.compile(ARITHMETIC_EXPRESSION_PATTERN);
@@ -22,7 +22,7 @@ public class DataReformer {
         }
         for (String s : strings) {
             if (s.length() > 1) {
-                refactorText = refactorText.replace(s, Calculate.result(s, i, j).replace(".0", ""));
+                refactorText = refactorText.replace(s, Calculate.arithmeticExpression(s, i, j).replace(".0", ""));
             }
         }
         System.out.println(refactorText);

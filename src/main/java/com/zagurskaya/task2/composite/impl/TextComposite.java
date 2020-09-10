@@ -57,9 +57,9 @@ public class TextComposite implements TextComponent {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         components.forEach(component -> {
-            if (TextComponentType.PARAGRAPH.equals(component.getComponentType())) {
+            if (TextComponentType.PARAGRAPH == component.getComponentType()) {
                 builder.append("\n\t");
-            } else if (TextComponentType.LEXEME.equals(component.getComponentType())) {
+            } else if (TextComponentType.LEXEME == component.getComponentType()) {
                 builder.append(" ");
             }
             builder.append(component.toString());

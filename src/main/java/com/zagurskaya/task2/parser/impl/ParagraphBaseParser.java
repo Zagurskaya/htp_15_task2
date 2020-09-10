@@ -3,21 +3,21 @@ package com.zagurskaya.task2.parser.impl;
 import com.zagurskaya.task2.composite.TextComponent;
 import com.zagurskaya.task2.composite.impl.TextComponentType;
 import com.zagurskaya.task2.composite.impl.TextComposite;
-import com.zagurskaya.task2.parser.Parser;
+import com.zagurskaya.task2.parser.BaseParser;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ParagraphParser implements Parser {
-    private final static ParagraphParser paragraphParser = new ParagraphParser();
-    private SentenceParser sentenceParser = SentenceParser.getInstance();
+public class ParagraphBaseParser implements BaseParser {
+    private final static ParagraphBaseParser paragraphParser = new ParagraphBaseParser();
+    private SentenceBaseParser sentenceParser = SentenceBaseParser.getInstance();
     private static final String PARAGRAPH_DELIMITER = "\n\t";
 
-    private ParagraphParser() {
+    private ParagraphBaseParser() {
     }
 
-    public static ParagraphParser getInstance() {
+    public static ParagraphBaseParser getInstance() {
         return paragraphParser;
     }
 

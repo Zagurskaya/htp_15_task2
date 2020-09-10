@@ -5,23 +5,23 @@ import com.zagurskaya.task2.composite.impl.Symbol;
 import com.zagurskaya.task2.composite.impl.SymbolType;
 import com.zagurskaya.task2.composite.impl.TextComponentType;
 import com.zagurskaya.task2.composite.impl.TextComposite;
-import com.zagurskaya.task2.parser.Parser;
+import com.zagurskaya.task2.parser.BaseParser;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SymbolParser implements Parser {
-    private static final SymbolParser symbolParser = new SymbolParser();
+public class SymbolBaseParser implements BaseParser {
+    private static final SymbolBaseParser symbolParser = new SymbolBaseParser();
     private static final String SYMBOL_DELIMITER = "";
 
     private static final String ALPHABET_VALIDATE_PATTERN = "[a-zA-Zа-яА-Я]{1}";
     private static final String NUMBER_VALIDATE_PATTERN = "\\d";
 
-    private SymbolParser() {
+    private SymbolBaseParser() {
     }
 
-    public static SymbolParser getInstance() {
+    public static SymbolBaseParser getInstance() {
         return symbolParser;
     }
 
