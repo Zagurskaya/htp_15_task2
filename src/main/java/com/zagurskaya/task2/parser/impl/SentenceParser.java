@@ -12,15 +12,15 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SentenceBaseParser implements BaseParser {
-    private final static SentenceBaseParser sentenceParser = new SentenceBaseParser();
+public class SentenceParser implements BaseParser {
+    private final static SentenceParser sentenceParser = new SentenceParser();
     private static final String SENTENCE_DELIMITER = "((?<=[.!?])|(?=[.!?]))";
-    private LexemeBaseParser lexemeParser = LexemeBaseParser.getInstance();
+    private LexemeParser lexemeParser = LexemeParser.getInstance();
 
-    private SentenceBaseParser() {
+    private SentenceParser() {
     }
 
-    public static SentenceBaseParser getInstance() {
+    public static SentenceParser getInstance() {
         return sentenceParser;
     }
 

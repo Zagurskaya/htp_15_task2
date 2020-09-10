@@ -26,6 +26,5 @@ public class Calculate {
             throw new ProjectException(" incorrect script", e);
         }
         return eval.toString();
-
     }
 }

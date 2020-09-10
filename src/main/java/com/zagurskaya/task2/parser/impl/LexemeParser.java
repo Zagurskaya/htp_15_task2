@@ -9,16 +9,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class LexemeBaseParser implements BaseParser {
-    private static final LexemeBaseParser lexemeParser = new LexemeBaseParser();
+public class LexemeParser implements BaseParser {
+    private static final LexemeParser lexemeParser = new LexemeParser();
     private static final String LEXEME_DELIMITER = "\\s";
-    private SymbolBaseParser symbolParser = SymbolBaseParser.getInstance();
+    private SymbolParser symbolParser = SymbolParser.getInstance();
 
 
-    private LexemeBaseParser() {
+    private LexemeParser() {
     }
 
-    static LexemeBaseParser getInstance() {
+    public static LexemeParser getInstance() {
         return lexemeParser;
     }
 

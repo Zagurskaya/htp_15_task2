@@ -11,17 +11,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SymbolBaseParser implements BaseParser {
-    private static final SymbolBaseParser symbolParser = new SymbolBaseParser();
+public class SymbolParser implements BaseParser {
+    private static final SymbolParser symbolParser = new SymbolParser();
     private static final String SYMBOL_DELIMITER = "";
 
     private static final String ALPHABET_VALIDATE_PATTERN = "[a-zA-Zа-яА-Я]{1}";
     private static final String NUMBER_VALIDATE_PATTERN = "\\d";
 
-    private SymbolBaseParser() {
+    private SymbolParser() {
     }
 
-    public static SymbolBaseParser getInstance() {
+    public static SymbolParser getInstance() {
         return symbolParser;
     }
 

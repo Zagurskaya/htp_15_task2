@@ -9,15 +9,15 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ParagraphBaseParser implements BaseParser {
-    private final static ParagraphBaseParser paragraphParser = new ParagraphBaseParser();
-    private SentenceBaseParser sentenceParser = SentenceBaseParser.getInstance();
+public class ParagraphParser implements BaseParser {
+    private final static ParagraphParser paragraphParser = new ParagraphParser();
+    private SentenceParser sentenceParser = SentenceParser.getInstance();
     private static final String PARAGRAPH_DELIMITER = "\n\t";
 
-    private ParagraphBaseParser() {
+    private ParagraphParser() {
     }
 
-    public static ParagraphBaseParser getInstance() {
+    public static ParagraphParser getInstance() {
         return paragraphParser;
     }
 
