@@ -12,16 +12,14 @@ import javax.script.ScriptException;
 public class Calculate {
     static final Logger logger = LogManager.getLogger(Calculate.class);
 
-    public String result(String text, Long i, Long j) {
+    public static String result(String text, Long i, Long j) {
         ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
         ScriptEngine engine = scriptEngineManager.getEngineByName("JavaScript");
 
         engine.put("i", i);
         engine.put("j", j);
-        Object eval = null;
+        Object eval;
         try {
-//            eval = engine.eval("function hello(p) { return \"Hello, \" + p; } \n" +
-//                    "hello(myparam)");
             eval = engine.eval(text);
         } catch (ScriptException e) {
             logger.log(Level.ERROR, " incorrect script", e);

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TextComposite implements TextComponent {
     private TextComponentType type;
-    List<TextComponent> components = new ArrayList<>();
+    private List<TextComponent> components = new ArrayList<>();
 
     public TextComposite(TextComponentType type) {
         this.type = type;
@@ -56,9 +56,8 @@ public class TextComposite implements TextComponent {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        components.stream().forEach(component -> {
+        components.forEach(component -> {
             if (TextComponentType.PARAGRAPH.equals(component.getComponentType())) {
-//                builder.append("\t");
                 builder.append("\n\t");
             } else if (TextComponentType.LEXEME.equals(component.getComponentType())) {
                 builder.append(" ");
