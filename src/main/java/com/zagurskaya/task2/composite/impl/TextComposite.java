@@ -1,7 +1,6 @@
 package com.zagurskaya.task2.composite.impl;
 
 import com.zagurskaya.task2.composite.TextComponent;
-import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,11 +58,10 @@ public class TextComposite implements TextComponent {
         StringBuilder builder = new StringBuilder();
         components.stream().forEach(component -> {
             if (TextComponentType.PARAGRAPH.equals(component.getComponentType())) {
+//                builder.append("\t");
                 builder.append("\n\t");
-            } else if (TextComponentType.LEXEME.equals(component.getComponentType()) ||
-                    TextComponentType.SENTENCE.equals(component.getComponentType())
-            ) {
-                builder.append(" "); //" "
+            } else if (TextComponentType.LEXEME.equals(component.getComponentType())) {
+                builder.append(" ");
             }
             builder.append(component.toString());
         });

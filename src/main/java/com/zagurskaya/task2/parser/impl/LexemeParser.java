@@ -1,7 +1,7 @@
 package com.zagurskaya.task2.parser.impl;
 
 import com.zagurskaya.task2.composite.TextComponent;
-import com.zagurskaya.task2.composite.impl.componentEnum.TextComponentType;
+import com.zagurskaya.task2.composite.impl.TextComponentType;
 import com.zagurskaya.task2.composite.impl.TextComposite;
 import com.zagurskaya.task2.parser.Parser;
 

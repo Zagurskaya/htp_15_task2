@@ -10,31 +10,33 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class DataReader {
     static final Logger logger = LogManager.getLogger(DataReader.class);
 
-
-    public List<String> readTextToRowList(String fileName) {
+    public String readText(String fileName) {
         File file;
+        String text;
         try {
             file = new File(getClass().getClassLoader().getResource(fileName).getFile());
         } catch (NullPointerException e) {
             logger.log(Level.ERROR, "Problems with the path to file", e);
             throw new ProjectException("Problems with the path to file", e);
         }
-        return readTextFromFileToRowTriangleList(file);
+        text = readTextFromFile(file);
+        return text;
 
     }
 
-    private List<String> readTextFromFileToRowTriangleList(File path) {
+    private String readTextFromFile(File path) {
+        StringBuilder builder = new StringBuilder();
+        String text;
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            return br.lines().collect(Collectors.toList());
-
+            br.lines().filter(line -> !line.isEmpty()).forEachOrdered(s -> builder.append(s).append("\n"));
+            text = builder.toString().trim();
+            return text;
         } catch (FileNotFoundException e) {
             logger.log(Level.ERROR, "file not found", e);
             throw new ProjectException("file not found", e);
