@@ -3,6 +3,8 @@ package com.zagurskaya.task2.composite.impl;
 import com.zagurskaya.task2.composite.TextComponent;
 import com.zagurskaya.task2.exception.ProjectException;
 
+import java.util.List;
+
 public class Symbol implements TextComponent {
 
     private SymbolType type;
@@ -31,6 +33,15 @@ public class Symbol implements TextComponent {
     @Override
     public TextComponentType getComponentType() {
         return null;
+    }
+
+    @Override
+    public List<TextComponent> getComponents() {
+        return null;
+    }
+
+    public SymbolType getType() {
+        return type;
     }
 
     @Override

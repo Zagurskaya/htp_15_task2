@@ -15,7 +15,7 @@ import java.io.IOException;
 public class DataReader {
     static final Logger logger = LogManager.getLogger(DataReader.class);
 
-    public String readText(String fileName) {
+    public String readText(String fileName) throws ProjectException {
         File file;
         String text;
         try {

@@ -1,6 +1,10 @@
 package com.zagurskaya.task2.util;
 
 import com.zagurskaya.task2.calculate.Calculate;
+import com.zagurskaya.task2.composite.TextComponent;
+import com.zagurskaya.task2.composite.impl.Symbol;
+import com.zagurskaya.task2.composite.impl.SymbolType;
+import com.zagurskaya.task2.composite.impl.TextComponentType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +29,24 @@ public class DataUtil {
                 refactorText = refactorText.replace(s, Calculate.arithmeticExpression(s, i, j).replace(".0", ""));
             }
         }
-        System.out.println(refactorText);
         return refactorText;
     }
 
+    public static Integer lengthAllСhildComponents(List<TextComponent> components) {
+        return components.stream().mapToInt(component -> component.getComponents().size()).sum();
+    }
+
+    public static Integer lengthComponents(List<TextComponent> components) {
+        int result;
+        result = lengthAllСhildComponents(components);
+        for (TextComponent component : components) {
+            List<TextComponent> symbols = component.getComponents();
+            for (TextComponent symbol : symbols) {
+                if (((Symbol) symbol).getType() == SymbolType.PUNCTUATION) {
+                    result--;
+                }
+            }
+        }
+        return result;
+    }
 }
