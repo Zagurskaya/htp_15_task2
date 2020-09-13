@@ -4,7 +4,6 @@ import com.zagurskaya.task2.calculate.Calculate;
 import com.zagurskaya.task2.composite.TextComponent;
 import com.zagurskaya.task2.composite.impl.Symbol;
 import com.zagurskaya.task2.composite.impl.SymbolType;
-import com.zagurskaya.task2.composite.impl.TextComponentType;
 
 import java.util.ArrayList;
 import java.util.List;
